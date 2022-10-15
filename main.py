@@ -11,7 +11,7 @@ def number_of_keys(dict):
  
     return count
 
-test = "gsettings set org.gnome.desktop.background picture-uri file:///home/duch3201/Projects/fedoraPostInstallScript/walp/PurpleLeft.svg"
+test = "gsettings set org.gnome.desktop.background picture-uri file:///home/duch3201/fedoraPostInstallScript/walp/PurpleLeft.svg"
 fdf = "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
 
 flatpaks = {
@@ -47,10 +47,21 @@ i = 0
 
 print(keynum)
 input("")
-while i < keynum:
-    #print("fdf")
-    os.system(flatpakinst+flatpaks[i])
-    i += 1
+#while i < keynum:
+ #   3print("fdf")
+    
+    #i += 1
+
+os.system(flatpakinst+flatpaks["0"])
+os.system(flatpakinst+flatpaks["1"])
+os.system(flatpakinst+flatpaks["2"])
+os.system(flatpakinst+flatpaks["3"])
+os.system(flatpakinst+flatpaks["4"])
+os.system(flatpakinst+flatpaks["5"])
+os.system(flatpakinst+flatpaks["6"])
+os.system(flatpakinst+flatpaks["7"])
+
+
 
 os.system(fdf)
 
