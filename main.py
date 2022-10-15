@@ -48,8 +48,8 @@ i = 0
 print(keynum)
 input("")
 while i < keynum:
-    print("fdf")
-    #os.system(flatpakinst+flatpaks[i])
+    #print("fdf")
+    os.system(flatpakinst+flatpaks[i])
     i += 1
 
 os.system(fdf)
