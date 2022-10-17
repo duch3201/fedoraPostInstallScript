@@ -1,5 +1,4 @@
 import os
-import zipfile
 
 def number_of_keys(dict):
  
@@ -65,10 +64,10 @@ os.system(flatpakinst+flatpaks["5"])
 os.system(flatpakinst+flatpaks["6"])
 os.system(flatpakinst+flatpaks["7"])
 
-gd = os.getcwd()
+os.chdir("..")
+os.chdir("ext")
 
-with zipfile.ZipFile(gd+"/ext/exts.zip", 'r') as zip_ref:
-    zip_ref.extractall("/usr/share/gnome-shell/extensions/")
+os.system("cp . /usr/share/gnome-shell/extensions/")
 
 os.system("gnome-extensions enable blur-my-shell@aunetx")
 os.system("gnome-extensions enable caffeine@patapon.info")
