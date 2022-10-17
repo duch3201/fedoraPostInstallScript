@@ -1,2 +1,2 @@
-# walp
-pls ignore
+# fedora post install script
+
