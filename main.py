@@ -1,5 +1,5 @@
 import os
-import time
+import zipfile
 
 def number_of_keys(dict):
  
@@ -64,5 +64,23 @@ os.system(flatpakinst+flatpaks["4"])
 os.system(flatpakinst+flatpaks["5"])
 os.system(flatpakinst+flatpaks["6"])
 os.system(flatpakinst+flatpaks["7"])
+
+gd = os.getcwd()
+
+with zipfile.ZipFile(gd+"/ext/exts.zip", 'r') as zip_ref:
+    zip_ref.extractall("/usr/share/gnome-shell/extensions/")
+
+os.system("gnome-extensions enable blur-my-shell@aunetx")
+os.system("gnome-extensions enable caffeine@patapon.info")
+os.system("gnome-extensions enable clipboard-indicator@tudmotu.com")
+os.system("gnome-extensions enable dash-to-dock@micxgx.gmail.com")
+os.system("gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com")
+os.system("gnome-extensions enable fullscreen-notifications@sorrow.about.alice.pm.me")
+os.system("gnome-extensions enable noannoyance@daase.net")
+os.system("gnome-extensions enable notification-banner-reloaded@marcinjakubowski.github.com")
+os.system("gnome-extensions enable reboottouefi@ubaygd.com")
+
+os.system("sudo dnf upgrade")
+
 
 print("done!")
